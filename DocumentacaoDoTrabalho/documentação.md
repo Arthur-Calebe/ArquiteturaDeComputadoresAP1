@@ -34,19 +34,21 @@ Registradores (PC, IR, ACC)
 Entrada e Saída
 
 ## 2. Elementos Arquiteturais Implementados
-Elemento de Arquitetura	        Implementação no Sketch
-Memória de Dados	            int MEM[16];
-Program Counter (PC)	        int PC;
-Instruction Register (IR)	    byte IR;
-Acumulador (ACC)	            int ACC;
-Flag de Zero	                bool FLAG_Z;
-Controle de execução	        bool EXECUTANDO;
-Memória de Programa	            String PROGRAMA[16];
-Unidade de Controle	            executarProximaInstrucao()
-Unidade Lógica e Aritmética	    Casos ADDK, SUBK, CMPK
-Entrada	                        Teclado 4x4
-Saída	                        LEDs, Buzzer, Serial Monitor
-Sensor	                        HC-SR04
+
+| Elemento de Arquitetura       | Implementação no Sketch       |
+| :-----------------------------| :-----------------------------|
+| Memória de Dados              | `int MEM[16];`                |
+| Program Counter (PC)          | `int PC;`                     |
+| Instruction Register (IR)     | `byte IR;`                    |
+| Acumulador (ACC)              | `int ACC;`                    |
+| Flag de Zero                  | `bool FLAG_Z;`                |
+| Controle de execução          | `bool EXECUTANDO;`            |
+| Memória de Programa           | `String PROGRAMA[16];`        |
+| Unidade de Controle           | `executarProximaInstrucao()`  |
+| Unidade Lógica e Aritmética   | Casos ADDK, SUBK, CMPK        |
+| Entrada                       | Teclado 4x4                   |
+| Saída                         | LEDs, Buzzer, Serial Monitor  |
+| Sensor                        | HC-SR04                       |
 
 - 3.1 Modo LOAD
 
@@ -97,23 +99,25 @@ PC = PC + 1
 Se opcode = HALT → EXECUTANDO = false
 
 ## 5. ISA Implementada
-Decimal	    Binário 	Mnemônico	    Descrição
-0	        0000	    NOP	Não         realiza operação
-1	        0001	    READ	        Lê sensor e armazena em ACC
-2	        0010	    LOADK	        Carrega constante em ACC
-3	        0011	    ADDK	        Soma constante ao ACC
-4	        0100	    SUBK	        Subtrai constante do ACC
-5	        0101	    CMPK	        Compara ACC com constante
-6	        0110	    LEDON	        Liga LED
-7	        0111	    LEDOFF	        Desliga LED
-8	        1000	    BUZON	        Liga buzzer
-9	        1001	    BUZOFF	        Desliga buzzer
-10	        1010	    DISP	        Exibe ACC
-11	        1011	    ALERT	        Resposta automática por distância
-12	        1100	    BINC	        Mostra opcode binário
-13	        1101	    STORE	        Armazena ACC em MEM[X]
-14	        1110        LOADM	        Carrega MEM[X] em ACC
-15	        1111        HALT	        Encerra execução
+
+| Decimal | Opcode | Mnemônico | Descrição                             |
+| :------ | :----- | :-------- | :-------------------------------------|
+| 0       | 0000   | NOP       | Não realiza operação.                 |
+| 1       | 0001   | READ      | Lê sensor e armazena em ACC.          |
+| 2       | 0010   | LOADK     | Carrega constante em ACC.             |
+| 3       | 0011   | ADDK      | Soma constante ao ACC.                |
+| 4       | 0100   | SUBK      | Subtrai constante do ACC.             |
+| 5       | 0101   | CMPK      | Compara ACC com constante.            |
+| 6       | 0110   | LEDON     | Liga LED.                             |
+| 7       | 0111   | LEDOFF    | Desliga LED.                          |
+| 8       | 1000   | BUZON     | Liga buzzer.                          |
+| 9       | 1001   | BUZOFF    | Desliga buzzer.                       |
+| 10      | 1010   | DISP      | Exibe ACC.                            |
+| 11      | 1011   | ALERT     | Resposta automática por distância.    |
+| 12      | 1100   | BINC      | Mostra opcode binário.                |
+| 13      | 1101   | STORE     | Armazena ACC em MEM[X].               |
+| 14      | 1110   | LOADM     | Carrega MEM[X] em ACC.                |
+| 15      | 1111   | HALT      | Encerra execução.                     |
 
 ## 6. Funcionalidades (F01 a F11)
 
