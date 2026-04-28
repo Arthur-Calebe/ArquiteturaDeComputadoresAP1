@@ -208,25 +208,25 @@ HALT → Encerra execução
 
 Durante apresentação:
 
-Teste READ
-Teste ADDK / SUBK
-Teste CMPK
-Teste STORE / LOADM
-Teste LEDON / LEDOFF
-Teste BUZON / BUZOFF
-Teste ALERT
-Teste HALT
+- Teste READ
+- Teste ADDK / SUBK
+- Teste CMPK
+- Teste STORE / LOADM
+- Teste LEDON / LEDOFF
+- Teste BUZON / BUZOFF
+- Teste ALERT
+- Teste HALT
 
 11. Conclusão
 
 O projeto implementa uma arquitetura de computador simplificada sobre o Arduino Mega, simulando:
 
-Registradores
-Memória
-ISA
-Unidade de Controle
-Unidade Lógica e Aritmética
-Programa armazenado
-Ciclo de instrução
+- Registradores
+- Memória
+- ISA
+- Unidade de Controle
+- Unidade Lógica e Aritmética
+- Programa armazenado
+- Ciclo de instrução
 
 ## O sistema permite visualizar, na prática, os conceitos fundamentais de Arquitetura de Computadores aplicados a um sistema embarcado real.
